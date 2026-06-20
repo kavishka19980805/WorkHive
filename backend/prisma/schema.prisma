@@ -1,0 +1,89 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  seeker
+  employer
+  admin
+}
+
+enum JobStatus {
+  active
+  flagged
+  removed
+}
+
+enum ApplicationStatus {
+  pending
+  accepted
+  rejected
+}
+
+model User {
+  id           String        @id @default(uuid())
+  email        String        @unique
+  passwordHash String
+  role         Role
+  jobs         Job[]         @relation("EmployerJobs")
+  applications Application[]
+  notifications Notification[]
+
+  @@index([role])
+}
+
+model Job {
+  id           String        @id @default(uuid())
+  employerId   String
+  employer     User          @relation("EmployerJobs", fields: [employerId], references: [id], onDelete: Cascade)
+  title        String
+  description  String
+  location     String
+  category     String
+  salaryMin    Int
+  salaryMax    Int
+  status       JobStatus     @default(active)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  applications Application[]
+
+  @@index([employerId])
+  @@map("jobs") // map model to jobs table name
+
+  // Indexes required by assessment
+  @@index([location, category])
+  @@index([status])
+  @@index([salaryMin, salaryMax])
+}
+
+model Application {
+  id          String            @id @default(uuid())
+  jobId       String
+  job         Job               @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  userId      String
+  user        User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  status      ApplicationStatus @default(pending)
+  coverLetter String
+  resumeUrl   String
+  resumeText  String?           @db.Text
+  appliedAt   DateTime          @default(now())
+
+  @@index([jobId, userId])
+  @@index([status])
+}
+
+model Notification {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+}
