@@ -219,6 +219,34 @@ button, input, textarea, select {
   font-size: 14px;
 }
 
+/* Input wrapper with icon support */
+.form-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-input-wrapper .form-input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  transition: color var(--transition);
+}
+
+.form-input-wrapper:focus-within .form-input-icon {
+  color: var(--primary);
+}
+
+.form-input-wrapper .form-control {
+  padding-left: 44px;
+}
+
 .form-control {
   width: 100%;
   background: var(--bg-secondary);
@@ -227,6 +255,7 @@ button, input, textarea, select {
   border-radius: var(--radius-md);
   color: var(--text-primary);
   transition: var(--transition);
+  font-size: 15px;
 }
 .form-control:focus {
   outline: none;

@@ -48,11 +48,7 @@ export default function RegisterPage() {
       const res = await fetch(`${backendUrl}/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email,
-          password,
-          role,
-        }),
+        body: JSON.stringify({ email, password, role }),
       });
 
       const data = await res.json();
@@ -84,14 +80,17 @@ export default function RegisterPage() {
         </div>
 
         <form onSubmit={handleSubmit}>
+          {/* Email */}
           <div className="form-group">
             <label className="form-label">Email Address</label>
-            <div className="search-input-wrapper">
-              <Mail size={18} style={{ position: 'absolute', left: '16px', color: 'var(--text-muted)' }} />
+            <div className="form-input-wrapper">
+              <span className="form-input-icon">
+                <Mail size={18} />
+              </span>
               <input
+                id="register-email"
                 type="email"
                 className="form-control"
-                style={{ paddingLeft: '48px' }}
                 placeholder="you@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -100,30 +99,37 @@ export default function RegisterPage() {
             {errors.email && <span className="form-error">{errors.email}</span>}
           </div>
 
+          {/* Account Role */}
           <div className="form-group">
             <label className="form-label">Account Role</label>
-            <div className="search-input-wrapper">
-              <User size={18} style={{ position: 'absolute', left: '16px', color: 'var(--text-muted)' }} />
+            <div className="form-input-wrapper">
+              <span className="form-input-icon">
+                <User size={18} />
+              </span>
               <select
+                id="register-role"
                 className="form-control"
-                style={{ paddingLeft: '48px', appearance: 'none', cursor: 'pointer' }}
+                style={{ appearance: 'none', cursor: 'pointer' }}
                 value={role}
                 onChange={(e) => setRole(e.target.value as any)}
               >
-                <option value="seeker">Job Seeker (Browse & Apply)</option>
-                <option value="employer">Employer (Post & Manage)</option>
+                <option value="seeker">Job Seeker (Browse &amp; Apply)</option>
+                <option value="employer">Employer (Post &amp; Manage)</option>
               </select>
             </div>
           </div>
 
+          {/* Password */}
           <div className="form-group">
             <label className="form-label">Password</label>
-            <div className="search-input-wrapper">
-              <Lock size={18} style={{ position: 'absolute', left: '16px', color: 'var(--text-muted)' }} />
+            <div className="form-input-wrapper">
+              <span className="form-input-icon">
+                <Lock size={18} />
+              </span>
               <input
+                id="register-password"
                 type="password"
                 className="form-control"
-                style={{ paddingLeft: '48px' }}
                 placeholder="Min 6 characters"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -132,14 +138,17 @@ export default function RegisterPage() {
             {errors.password && <span className="form-error">{errors.password}</span>}
           </div>
 
+          {/* Confirm Password */}
           <div className="form-group">
             <label className="form-label">Confirm Password</label>
-            <div className="search-input-wrapper">
-              <Lock size={18} style={{ position: 'absolute', left: '16px', color: 'var(--text-muted)' }} />
+            <div className="form-input-wrapper">
+              <span className="form-input-icon">
+                <Lock size={18} />
+              </span>
               <input
+                id="register-confirm-password"
                 type="password"
                 className="form-control"
-                style={{ paddingLeft: '48px' }}
                 placeholder="Repeat password"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}

@@ -68,14 +68,17 @@ function LoginForm() {
       </div>
 
       <form onSubmit={handleSubmit}>
+        {/* Email field */}
         <div className="form-group">
           <label className="form-label">Email Address</label>
-          <div className="search-input-wrapper">
-            <Mail size={18} style={{ position: 'absolute', left: '16px', color: 'var(--text-muted)' }} />
+          <div className="form-input-wrapper">
+            <span className="form-input-icon">
+              <Mail size={18} />
+            </span>
             <input
+              id="login-email"
               type="email"
               className="form-control"
-              style={{ paddingLeft: '48px' }}
               placeholder="you@example.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -84,14 +87,17 @@ function LoginForm() {
           {errors.email && <span className="form-error">{errors.email}</span>}
         </div>
 
+        {/* Password field */}
         <div className="form-group">
           <label className="form-label">Password</label>
-          <div className="search-input-wrapper">
-            <Lock size={18} style={{ position: 'absolute', left: '16px', color: 'var(--text-muted)' }} />
+          <div className="form-input-wrapper">
+            <span className="form-input-icon">
+              <Lock size={18} />
+            </span>
             <input
+              id="login-password"
               type="password"
               className="form-control"
-              style={{ paddingLeft: '48px' }}
               placeholder="••••••••"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -118,7 +124,7 @@ function LoginForm() {
       </form>
 
       <div style={{ textAlign: 'center', marginTop: '24px', color: 'var(--text-secondary)' }}>
-        Don't have an account?{' '}
+        Don&apos;t have an account?{' '}
         <Link href="/auth/register" style={{ color: 'var(--primary)', fontWeight: '600' }}>
           Register here
         </Link>
