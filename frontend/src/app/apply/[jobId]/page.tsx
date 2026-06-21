@@ -26,7 +26,7 @@ export default function ApplyPage() {
     const fetchJob = async () => {
       try {
         const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api/v1';
-        const res = await fetch(`${backendUrl}/jobs/${jobId}`);
+        const res = await fetch(`${backendUrl}/jobs/${jobId}`, { headers: { 'ngrok-skip-browser-warning': 'true', 'ngrok-skip-browser-warning': 'true' } });
         const data = await res.json();
         if (data.success) {
           setJobTitle(data.data.title);

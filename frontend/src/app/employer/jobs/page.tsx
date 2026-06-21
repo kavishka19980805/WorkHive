@@ -31,8 +31,7 @@ export default function EmployerJobsPage() {
       const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api/v1';
 
       try {
-        const res = await fetch(`${backendUrl}/employer/jobs`, {
-          headers: {
+        const res = await fetch(`${backendUrl}/employer/jobs`, { headers: { 'ngrok-skip-browser-warning': 'true',
             Authorization: `Bearer ${token}`,
           },
         });

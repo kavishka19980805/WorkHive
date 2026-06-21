@@ -41,7 +41,7 @@ export async function applyAction(formData: FormData) {
     const uploadFormData = new FormData();
     uploadFormData.append('resume', resumeFile);
 
-    const uploadRes = await fetch(`${BACKEND_URL}/resume/upload`, {
+    const uploadRes = await fetch(`${BACKEND_URL}/resume/upload`, { headers: { 'ngrok-skip-browser-warning': 'true' }, 
       method: 'POST',
       headers: {
         Authorization: authHeader,
@@ -60,7 +60,7 @@ export async function applyAction(formData: FormData) {
     const resumeUrl = uploadData.data.resumeUrl;
 
     // 2. Submit application with the uploaded resume URL
-    const appRes = await fetch(`${BACKEND_URL}/applications`, {
+    const appRes = await fetch(`${BACKEND_URL}/applications`, { headers: { 'ngrok-skip-browser-warning': 'true' }, 
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -101,7 +101,7 @@ export async function postJobAction(jobData: {
   try {
     const authHeader = await getAuthHeader();
 
-    const res = await fetch(`${BACKEND_URL}/jobs`, {
+    const res = await fetch(`${BACKEND_URL}/jobs`, { headers: { 'ngrok-skip-browser-warning': 'true' }, 
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -131,7 +131,7 @@ export async function updateApplicantAction(applicationId: string, status: 'acce
   try {
     const authHeader = await getAuthHeader();
 
-    const res = await fetch(`${BACKEND_URL}/applications/${applicationId}/status`, {
+    const res = await fetch(`${BACKEND_URL}/applications/${applicationId}/status`, { headers: { 'ngrok-skip-browser-warning': 'true' }, 
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

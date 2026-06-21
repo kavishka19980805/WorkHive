@@ -28,7 +28,7 @@ async function getJobDetails(id: string) {
   const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api/v1';
 
   try {
-    const res = await fetch(`${backendUrl}/jobs/${id}`, {
+    const res = await fetch(`${backendUrl}/jobs/${id}`, { headers: { 'ngrok-skip-browser-warning': 'true' }, 
       cache: 'no-store', // Disable caching for SSR
     });
 

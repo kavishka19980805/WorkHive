@@ -47,15 +47,14 @@ export default function JobApplicantsPage() {
 
       try {
         // Fetch Job Title
-        const jobRes = await fetch(`${backendUrl}/jobs/${jobId}`);
+        const jobRes = await fetch(`${backendUrl}/jobs/${jobId}`, { headers: { 'ngrok-skip-browser-warning': 'true', 'ngrok-skip-browser-warning': 'true' } });
         const jobData = await jobRes.json();
         if (jobData.success) {
           setJobTitle(jobData.data.title);
         }
 
         // Fetch Applicants
-        const appRes = await fetch(`${backendUrl}/jobs/${jobId}/applicants`, {
-          headers: {
+        const appRes = await fetch(`${backendUrl}/jobs/${jobId}/applicants`, { headers: { 'ngrok-skip-browser-warning': 'true',
             Authorization: `Bearer ${token}`,
           },
         });

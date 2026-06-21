@@ -36,8 +36,7 @@ export default function SeekerDashboard() {
       
       const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api/v1';
       try {
-        const res = await fetch(`${backendUrl}/applications/mine`, {
-          headers: {
+        const res = await fetch(`${backendUrl}/applications/mine`, { headers: { 'ngrok-skip-browser-warning': 'true',
             Authorization: `Bearer ${token}`,
           },
         });

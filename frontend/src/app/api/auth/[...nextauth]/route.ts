@@ -17,7 +17,7 @@ export const authOptions: NextAuthOptions = {
         const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api/v1';
 
         try {
-          const res = await fetch(`${backendUrl}/auth/login`, {
+          const res = await fetch(`${backendUrl}/auth/login`, { headers: { 'ngrok-skip-browser-warning': 'true' }, 
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

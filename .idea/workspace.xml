@@ -4,14 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce4c4d37-a98f-4b58-a12b-8b76dee03cbb" name="Changes" comment="fix some issue">
+    <list default="true" id="ce4c4d37-a98f-4b58-a12b-8b76dee03cbb" name="Changes" comment="fix some responsiveness issue and css isssue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/.prisma/client/edge.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/.prisma/client/edge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/.prisma/client/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/.prisma/client/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workhive.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/workhive.postman_collection.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/AGENTS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/CLAUDE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/api/auth/[...nextauth]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/api/auth/[...nextauth]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/apply/[jobId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/apply/[jobId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/auth/register/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/auth/register/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/dashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/dashboard/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/employer/jobs/[jobId]/applicants/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/employer/jobs/[jobId]/applicants/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/employer/jobs/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/employer/jobs/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/jobs/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/jobs/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,61 +47,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="6.817536948809422E-5" />
-      <entry key="MS500" value="0.2537749594164194" />
-      <entry key="S2" value="1.1932645639332058" />
-      <entry key="S5" value="1.6266752188439075" />
-      <entry key="S10" value="1.803696464574459" />
-      <entry key="S30" value="1.9457153801730886" />
-      <entry key="S60" value="2.349324211755668" />
-      <entry key="M2" value="4.035739159550245" />
-      <entry key="M5" value="7.613108626661667" />
-      <entry key="M10" value="9.858979262433902" />
-      <entry key="M15" value="10.791305232625618" />
-      <entry key="M30" value="11.833953840855598" />
-      <entry key="H1" value="12.400841862643004" />
-      <entry key="H2" value="12.84920682575744" />
-      <entry key="H4" value="18.33355731981683" />
-      <entry key="D1" value="155.58020012763092" />
-      <entry key="W1" value="289.131335433079" />
+      <entry key="MS100" value="1.0073743634138344" />
+      <entry key="MS500" value="1.5261587963835819" />
+      <entry key="S2" value="2.784082817764091" />
+      <entry key="S5" value="3.890980727634854" />
+      <entry key="S10" value="5.587158710212264" />
+      <entry key="S30" value="8.811184009086357" />
+      <entry key="S60" value="10.213249270407898" />
+      <entry key="M2" value="11.052194526025579" />
+      <entry key="M5" value="11.661040353116597" />
+      <entry key="M10" value="12.632519173091616" />
+      <entry key="M15" value="13.942153370198238" />
+      <entry key="M30" value="17.122777217383238" />
+      <entry key="H1" value="20.17861276319664" />
+      <entry key="H2" value="22.439536692059246" />
+      <entry key="H4" value="28.53017174420059" />
+      <entry key="D1" value="164.92982058845456" />
+      <entry key="W1" value="300.42267981771806" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0000000054465805" />
-      <entry key="S30" value="1.002702604928373" />
-      <entry key="S60" value="1.0731990868692478" />
-      <entry key="M2" value="1.382198526930989" />
-      <entry key="M5" value="2.031379402123938" />
-      <entry key="M10" value="2.4361672682429045" />
-      <entry key="M15" value="2.603771215583164" />
-      <entry key="M30" value="2.7909525164564064" />
-      <entry key="H1" value="2.8926020738386358" />
-      <entry key="H2" value="2.9523412078343307" />
-      <entry key="H4" value="3.1550082773515884" />
-      <entry key="D1" value="8.490650179615715" />
-      <entry key="W1" value="15.167899803249043" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="6.4E-323" />
+      <entry key="S5" value="1.3265915490785077E-129" />
+      <entry key="S10" value="3.6422404691745473E-65" />
+      <entry key="S30" value="3.3237499789548E-22" />
+      <entry key="S60" value="1.9539272812739656E-11" />
+      <entry key="M2" value="5.897724437029116E-6" />
+      <entry key="M5" value="0.014448962532203102" />
+      <entry key="M10" value="0.20546124435263063" />
+      <entry key="M15" value="0.500746622192696" />
+      <entry key="M30" value="1.2239397824249783" />
+      <entry key="H1" value="1.9155456000626614" />
+      <entry key="H2" value="2.4025279521829885" />
+      <entry key="H4" value="2.8461085069943093" />
+      <entry key="D1" value="8.34608441708615" />
+      <entry key="W1" value="15.130734040747605" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.019169110158164134" />
-      <entry key="MS500" value="0.7045203198762187" />
-      <entry key="S2" value="2.0108497062807964" />
-      <entry key="S5" value="2.5489961498040987" />
-      <entry key="S10" value="2.764016993398851" />
-      <entry key="S30" value="2.934924214415824" />
-      <entry key="S60" value="3.4147563316126353" />
-      <entry key="M2" value="5.411847911454398" />
-      <entry key="M5" value="9.6401927233986" />
-      <entry key="M10" value="12.292418031307184" />
-      <entry key="M15" value="13.393096993814723" />
-      <entry key="M30" value="14.623826996254895" />
-      <entry key="H1" value="15.292879901152112" />
-      <entry key="H2" value="15.801256956498575" />
-      <entry key="H4" value="21.48838842836021" />
-      <entry key="D1" value="164.0707123185779" />
-      <entry key="W1" value="304.29919883117344" />
+      <entry key="MS100" value="0.9731090398256861" />
+      <entry key="MS500" value="1.5162428852786476" />
+      <entry key="S2" value="2.7794649351378466" />
+      <entry key="S5" value="3.8882693483755673" />
+      <entry key="S10" value="5.585108083610114" />
+      <entry key="S30" value="8.810055156897802" />
+      <entry key="S60" value="10.212587681234496" />
+      <entry key="M2" value="11.051840506974472" />
+      <entry key="M5" value="11.67530710811594" />
+      <entry key="M10" value="12.837673126115675" />
+      <entry key="M15" value="14.442467557123248" />
+      <entry key="M30" value="18.346217627742014" />
+      <entry key="H1" value="22.09377179246983" />
+      <entry key="H2" value="24.841821237624075" />
+      <entry key="H4" value="31.376117157818033" />
+      <entry key="D1" value="173.27576882086615" />
+      <entry key="W1" value="315.5533774645826" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -147,7 +153,7 @@
       <updated>1781847689468</updated>
       <workItem from="1781847690983" duration="3926000" />
       <workItem from="1781853473323" duration="27045000" />
-      <workItem from="1781945718025" duration="21645000" />
+      <workItem from="1781945718025" duration="28611000" />
     </task>
     <task id="LOCAL-00001">
       <option name="closed" value="true" />
@@ -189,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781951029352</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix some responsiveness issue and css isssue">
+      <option name="closed" value="true" />
+      <created>1782023997345</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1782023997345</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +225,7 @@
     <MESSAGE value="fix some css issues" />
     <MESSAGE value="add ngrok url" />
     <MESSAGE value="fix some issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix some issue" />
+    <MESSAGE value="fix some responsiveness issue and css isssue" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix some responsiveness issue and css isssue" />
   </component>
 </project>

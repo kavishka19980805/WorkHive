@@ -36,7 +36,7 @@ async function getJobs(searchParams: any) {
   if (searchParams.minSalary) query.append('minSalary', searchParams.minSalary);
 
   try {
-    const res = await fetch(`${backendUrl}/jobs?${query.toString()}`, {
+    const res = await fetch(`${backendUrl}/jobs?${query.toString()}`, { headers: { 'ngrok-skip-browser-warning': 'true' }, 
       cache: 'no-store', // Disable caching for SSR
     });
 

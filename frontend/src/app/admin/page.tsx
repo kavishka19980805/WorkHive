@@ -34,11 +34,11 @@ export default function AdminPanel() {
     try {
       setLoading(true);
       // Fetch active jobs
-      const resActive = await fetch(`${backendUrl}/jobs?status=active`);
+      const resActive = await fetch(`${backendUrl}/jobs?status=active`, { headers: { 'ngrok-skip-browser-warning': 'true', 'ngrok-skip-browser-warning': 'true' } });
       const dataActive = await resActive.json();
 
       // Fetch flagged jobs
-      const resFlagged = await fetch(`${backendUrl}/jobs?status=flagged`);
+      const resFlagged = await fetch(`${backendUrl}/jobs?status=flagged`, { headers: { 'ngrok-skip-browser-warning': 'true', 'ngrok-skip-browser-warning': 'true' } });
       const dataFlagged = await resFlagged.json();
 
       if (dataActive.success) setActiveJobs(dataActive.data);
@@ -60,7 +60,7 @@ export default function AdminPanel() {
     const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api/v1';
 
     try {
-      const res = await fetch(`${backendUrl}/admin/jobs/${id}/flag`, {
+      const res = await fetch(`${backendUrl}/admin/jobs/${id}/flag`, { headers: { 'ngrok-skip-browser-warning': 'true' }, 
         method: 'PATCH',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -94,7 +94,7 @@ export default function AdminPanel() {
     const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api/v1';
 
     try {
-      const res = await fetch(`${backendUrl}/admin/jobs/${id}`, {
+      const res = await fetch(`${backendUrl}/admin/jobs/${id}`, { headers: { 'ngrok-skip-browser-warning': 'true' }, 
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,
