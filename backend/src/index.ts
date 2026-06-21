@@ -18,6 +18,9 @@ import { errorMiddleware } from './middlewares/errorMiddleware';
 const app = express();
 const port = process.env.PORT || 5000;
 
+// Trust proxy headers from ngrok / reverse proxies (fixes express-rate-limit X-Forwarded-For warning)
+app.set('trust proxy', 1);
+
 // Security and utility middlewares
 app.use(helmet({
   crossOriginResourcePolicy: false, // Allow loading static uploads in frontend

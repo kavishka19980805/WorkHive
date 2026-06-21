@@ -32,7 +32,7 @@ export default function Navbar() {
   };
 
   const isHome = pathname === '/';
-  const isTransparent = isHome && !isScrolled;
+  const isTransparent = isHome && !isScrolled && !menuOpen;
   const isActive = (path: string) => pathname === path;
 
   return (
