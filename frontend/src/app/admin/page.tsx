@@ -34,11 +34,11 @@ export default function AdminPanel() {
     try {
       setLoading(true);
       // Fetch active jobs
-      const resActive = await fetch(`${backendUrl}/jobs?status=active`);
+      const resActive = await fetch(`${backendUrl}/jobs?status=active`, { headers: { 'ngrok-skip-browser-warning': 'true' } });
       const dataActive = await resActive.json();
 
       // Fetch flagged jobs
-      const resFlagged = await fetch(`${backendUrl}/jobs?status=flagged`);
+      const resFlagged = await fetch(`${backendUrl}/jobs?status=flagged`, { headers: { 'ngrok-skip-browser-warning': 'true' } });
       const dataFlagged = await resFlagged.json();
 
       if (dataActive.success) setActiveJobs(dataActive.data);
@@ -62,7 +62,7 @@ export default function AdminPanel() {
     try {
       const res = await fetch(`${backendUrl}/admin/jobs/${id}/flag`, {
         method: 'PATCH',
-        headers: {
+        headers: { 'ngrok-skip-browser-warning': 'true', 
           Authorization: `Bearer ${token}`,
         },
       });
@@ -96,7 +96,7 @@ export default function AdminPanel() {
     try {
       const res = await fetch(`${backendUrl}/admin/jobs/${id}`, {
         method: 'DELETE',
-        headers: {
+        headers: { 'ngrok-skip-browser-warning': 'true', 
           Authorization: `Bearer ${token}`,
         },
       });

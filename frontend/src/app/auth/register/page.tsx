@@ -47,7 +47,7 @@ export default function RegisterPage() {
     try {
       const res = await fetch(`${backendUrl}/auth/register`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'ngrok-skip-browser-warning': 'true',  'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password, role }),
       });
 

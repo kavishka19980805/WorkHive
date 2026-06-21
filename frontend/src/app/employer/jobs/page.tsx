@@ -32,7 +32,7 @@ export default function EmployerJobsPage() {
 
       try {
         const res = await fetch(`${backendUrl}/employer/jobs`, {
-          headers: {
+          headers: { 'ngrok-skip-browser-warning': 'true', 
             Authorization: `Bearer ${token}`,
           },
         });

@@ -43,7 +43,7 @@ export async function applyAction(formData: FormData) {
 
     const uploadRes = await fetch(`${BACKEND_URL}/resume/upload`, {
       method: 'POST',
-      headers: {
+      headers: { 'ngrok-skip-browser-warning': 'true', 
         Authorization: authHeader,
       },
       body: uploadFormData,
@@ -62,7 +62,7 @@ export async function applyAction(formData: FormData) {
     // 2. Submit application with the uploaded resume URL
     const appRes = await fetch(`${BACKEND_URL}/applications`, {
       method: 'POST',
-      headers: {
+      headers: { 'ngrok-skip-browser-warning': 'true', 
         'Content-Type': 'application/json',
         Authorization: authHeader,
       },
@@ -103,7 +103,7 @@ export async function postJobAction(jobData: {
 
     const res = await fetch(`${BACKEND_URL}/jobs`, {
       method: 'POST',
-      headers: {
+      headers: { 'ngrok-skip-browser-warning': 'true', 
         'Content-Type': 'application/json',
         Authorization: authHeader,
       },
@@ -133,7 +133,7 @@ export async function updateApplicantAction(applicationId: string, status: 'acce
 
     const res = await fetch(`${BACKEND_URL}/applications/${applicationId}/status`, {
       method: 'PATCH',
-      headers: {
+      headers: { 'ngrok-skip-browser-warning': 'true', 
         'Content-Type': 'application/json',
         Authorization: authHeader,
       },
