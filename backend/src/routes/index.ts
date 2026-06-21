@@ -88,4 +88,10 @@ router.get(
   applicationController.getNotifications as any
 );
 
+router.patch(
+  '/notifications/:id/read',
+  authMiddleware as any,
+  applicationController.markNotificationAsRead as any
+);
+
 export default router;

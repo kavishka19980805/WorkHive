@@ -164,6 +164,10 @@ export class ApplicationService {
   async getNotifications(userId: string) {
     return applicationRepository.findNotificationsByUserId(userId);
   }
+
+  async markNotificationAsRead(id: string, userId: string) {
+    return applicationRepository.markNotificationAsRead(id, userId);
+  }
 }
 
 export const applicationService = new ApplicationService();

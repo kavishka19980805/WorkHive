@@ -6,12 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="ce4c4d37-a98f-4b58-a12b-8b76dee03cbb" name="Changes" comment="fix some issue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/.prisma/client/edge.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/.prisma/client/edge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/.prisma/client/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/.prisma/client/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/dist/controllers/ApplicationController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dist/controllers/ApplicationController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dist/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/dist/repositories/ApplicationRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dist/repositories/ApplicationRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/dist/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dist/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/dist/services/ApplicationService.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dist/services/ApplicationService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/dist/workers/resumeParserWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dist/workers/resumeParserWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/controllers/ApplicationController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/ApplicationController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/repositories/ApplicationRepository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/repositories/ApplicationRepository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/routes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/routes/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/services/ApplicationService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/services/ApplicationService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/workers/resumeParserWorker.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/workers/resumeParserWorker.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/apply/[jobId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/apply/[jobId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/auth/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/auth/login/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/employer/post/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/employer/post/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workhive.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/workhive.postman_collection.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,30 +116,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "javascript.preferred.runtime.type.id": "node",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/hasaranga/Desktop/Assignment",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "/Users/hasaranga/Desktop/Assignment/frontend/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hasaranga/Desktop/Assignment&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/hasaranga/Desktop/Assignment/frontend/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

@@ -153,6 +153,9 @@ class ApplicationService {
     async getNotifications(userId) {
         return ApplicationRepository_1.applicationRepository.findNotificationsByUserId(userId);
     }
+    async markNotificationAsRead(id, userId) {
+        return ApplicationRepository_1.applicationRepository.markNotificationAsRead(id, userId);
+    }
 }
 exports.ApplicationService = ApplicationService;
 exports.applicationService = new ApplicationService();

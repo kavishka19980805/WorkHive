@@ -104,6 +104,12 @@ class ApplicationRepository {
             orderBy: { createdAt: 'desc' },
         });
     }
+    async markNotificationAsRead(id, userId) {
+        return prisma_1.default.notification.updateMany({
+            where: { id, userId },
+            data: { read: true },
+        });
+    }
 }
 exports.ApplicationRepository = ApplicationRepository;
 exports.applicationRepository = new ApplicationRepository();

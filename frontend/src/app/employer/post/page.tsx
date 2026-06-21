@@ -67,8 +67,7 @@ export default function PostJobPage() {
         dispatch(showToast({ message: res.error || 'Failed to post job', type: 'error' }));
       } else {
         dispatch(showToast({ message: 'Job posting published successfully!', type: 'success' }));
-        router.push('/employer/jobs');
-        router.refresh();
+        window.location.href = '/employer/jobs';
       }
     } catch (err: any) {
       dispatch(showToast({ message: err.message || 'Something went wrong', type: 'error' }));

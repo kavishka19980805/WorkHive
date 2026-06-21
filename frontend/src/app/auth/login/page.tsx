@@ -50,8 +50,7 @@ function LoginForm() {
         dispatch(showToast({ message: res.error, type: 'error' }));
       } else {
         dispatch(showToast({ message: 'Welcome back to WorkHive!', type: 'success' }));
-        router.push(callbackUrl);
-        router.refresh();
+        window.location.href = callbackUrl;
       }
     } catch (err: any) {
       dispatch(showToast({ message: err.message || 'Something went wrong', type: 'error' }));

@@ -30,4 +30,5 @@ router.patch('/admin/jobs/:id/flag', authMiddleware_1.authMiddleware, (0, rbacMi
 router.delete('/admin/jobs/:id', authMiddleware_1.authMiddleware, (0, rbacMiddleware_1.rbacMiddleware)(['admin']), JobController_1.jobController.remove);
 // --- Notifications (Extra Utility) ---
 router.get('/notifications', authMiddleware_1.authMiddleware, ApplicationController_1.applicationController.getNotifications);
+router.patch('/notifications/:id/read', authMiddleware_1.authMiddleware, ApplicationController_1.applicationController.markNotificationAsRead);
 exports.default = router;

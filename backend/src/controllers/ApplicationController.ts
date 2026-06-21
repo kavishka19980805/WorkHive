@@ -116,6 +116,17 @@ export class ApplicationController {
     }
   }
 
+  async markNotificationAsRead(req: AuthenticatedRequest, res: Response, next: NextFunction) {
+    try {
+      const userId = req.user!.id;
+      const notificationId = req.params.id;
+      await applicationService.markNotificationAsRead(notificationId, userId);
+      return res.status(200).json({ success: true });
+    } catch (err) {
+      next(err);
+    }
+  }
+
   async uploadResume(req: AuthenticatedRequest, res: Response, next: NextFunction) {
     try {
       if (!req.file) {

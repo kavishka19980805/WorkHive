@@ -116,6 +116,13 @@ export class ApplicationRepository {
       orderBy: { createdAt: 'desc' },
     });
   }
+
+  async markNotificationAsRead(id: string, userId: string) {
+    return prisma.notification.updateMany({
+      where: { id, userId },
+      data: { read: true },
+    });
+  }
 }
 
 export const applicationRepository = new ApplicationRepository();

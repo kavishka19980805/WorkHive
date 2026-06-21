@@ -7,6 +7,7 @@ import { signOut } from 'next-auth/react';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
 import { Briefcase, LogOut, User, PlusCircle, Shield, List, Menu, X } from 'lucide-react';
+import NotificationDropdown from './NotificationDropdown';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -50,108 +51,117 @@ export default function Navbar() {
           </svg>
         </Link>
 
-        {/* Hamburger button - mobile only */}
-        <button
-          className="nav-hamburger"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-        >
-          {menuOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+          {/* Nav links */}
+          <ul className={`nav-links ${menuOpen ? 'nav-links-open' : ''}`}>
+            <li>
+              <Link href="/" className={`nav-link ${isActive('/') ? 'active' : ''}`}>
+                Browse Jobs
+              </Link>
+            </li>
 
-        {/* Nav links */}
-        <ul className={`nav-links ${menuOpen ? 'nav-links-open' : ''}`}>
-          <li>
-            <Link href="/" className={`nav-link ${isActive('/') ? 'active' : ''}`}>
-              Browse Jobs
-            </Link>
-          </li>
-
-          {status === 'loading' ? (
-            <li className="nav-link animate-pulse">Syncing...</li>
-          ) : user ? (
-            <>
-              {/* Seeker Navigation */}
-              {user.role === 'seeker' && (
-                <li>
-                  <Link
-                    href="/dashboard"
-                    className={`nav-link ${isActive('/dashboard') ? 'active' : ''}`}
-                  >
-                    My Applications
-                  </Link>
-                </li>
-              )}
-
-              {/* Employer Navigation */}
-              {user.role === 'employer' && (
-                <>
+            {status === 'loading' ? (
+              <li className="nav-link animate-pulse">Syncing...</li>
+            ) : user ? (
+              <>
+                {/* Seeker Navigation */}
+                {user.role === 'seeker' && (
                   <li>
                     <Link
-                      href="/employer/post"
-                      className={`nav-link ${isActive('/employer/post') ? 'active' : ''}`}
+                      href="/dashboard"
+                      className={`nav-link ${isActive('/dashboard') ? 'active' : ''}`}
                     >
-                      <PlusCircle size={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
-                      Post Job
+                      My Applications
                     </Link>
                   </li>
+                )}
+
+                {/* Employer Navigation */}
+                {user.role === 'employer' && (
+                  <>
+                    <li>
+                      <Link
+                        href="/employer/post"
+                        className={`nav-link ${isActive('/employer/post') ? 'active' : ''}`}
+                      >
+                        <PlusCircle size={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+                        Post Job
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/employer/jobs"
+                        className={`nav-link ${isActive('/employer/jobs') ? 'active' : ''}`}
+                      >
+                        <List size={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+                        My Postings
+                      </Link>
+                    </li>
+                  </>
+                )}
+
+                {/* Admin Navigation */}
+                {user.role === 'admin' && (
                   <li>
                     <Link
-                      href="/employer/jobs"
-                      className={`nav-link ${isActive('/employer/jobs') ? 'active' : ''}`}
+                      href="/admin"
+                      className={`nav-link ${isActive('/admin') ? 'active' : ''}`}
                     >
-                      <List size={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
-                      My Postings
+                      <Shield size={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+                      Moderation Panel
                     </Link>
                   </li>
-                </>
-              )}
+                )}
 
-              {/* Admin Navigation */}
-              {user.role === 'admin' && (
+                <li className="nav-user-row">
+                  <span
+                    className="nav-user-label"
+                    style={{ color: isTransparent ? 'rgba(255,255,255,0.9)' : 'var(--text-secondary)' }}
+                  >
+                    <User size={14} />
+                    {user.email.split('@')[0]} ({user.role})
+                  </span>
+                  <button onClick={handleSignOut} className="btn btn-secondary btn-sm" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <LogOut size={14} />
+                    Sign Out
+                  </button>
+                </li>
+              </>
+            ) : (
+              <>
                 <li>
                   <Link
-                    href="/admin"
-                    className={`nav-link ${isActive('/admin') ? 'active' : ''}`}
+                    href="/auth/login"
+                    className={`nav-link ${isActive('/auth/login') ? 'active' : ''}`}
                   >
-                    <Shield size={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
-                    Moderation Panel
+                    Sign In
                   </Link>
                 </li>
-              )}
+                <li>
+                  <Link href="/auth/register" className="btn btn-primary btn-sm">
+                    Register
+                  </Link>
+                </li>
+              </>
+            )}
+          </ul>
 
-              <li className="nav-user-row">
-                <span
-                  className="nav-user-label"
-                  style={{ color: isTransparent ? 'rgba(255,255,255,0.9)' : 'var(--text-secondary)' }}
-                >
-                  <User size={14} />
-                  {user.email.split('@')[0]} ({user.role})
-                </span>
-                <button onClick={handleSignOut} className="btn btn-secondary btn-sm" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                  <LogOut size={14} />
-                  Sign Out
-                </button>
-              </li>
-            </>
-          ) : (
-            <>
-              <li>
-                <Link
-                  href="/auth/login"
-                  className={`nav-link ${isActive('/auth/login') ? 'active' : ''}`}
-                >
-                  Sign In
-                </Link>
-              </li>
-              <li>
-                <Link href="/auth/register" className="btn btn-primary btn-sm">
-                  Register
-                </Link>
-              </li>
-            </>
+          {/* Mobile/Desktop Notification */}
+          {user?.role === 'employer' && (
+            <NotificationDropdown isTransparent={isTransparent} />
           )}
-        </ul>
+
+          {/* Hamburger button - mobile only */}
+          <button
+            className="nav-hamburger"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          >
+            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
+
+
       </div>
     </nav>
   );

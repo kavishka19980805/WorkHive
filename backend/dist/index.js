@@ -52,6 +52,8 @@ const rateLimiter_1 = require("./middlewares/rateLimiter");
 const errorMiddleware_1 = require("./middlewares/errorMiddleware");
 const app = (0, express_1.default)();
 const port = process.env.PORT || 5000;
+// Trust proxy headers from ngrok / reverse proxies (fixes express-rate-limit X-Forwarded-For warning)
+app.set('trust proxy', 1);
 // Security and utility middlewares
 app.use((0, helmet_1.default)({
     crossOriginResourcePolicy: false, // Allow loading static uploads in frontend

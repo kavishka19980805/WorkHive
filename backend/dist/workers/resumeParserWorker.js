@@ -39,6 +39,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const worker_threads_1 = require("worker_threads");
 const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
+// @ts-ignore
 const pdf_parse_1 = __importDefault(require("pdf-parse"));
 async function parseResume() {
     const { filePath, textOutputPath } = worker_threads_1.workerData;
