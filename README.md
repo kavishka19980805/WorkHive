@@ -84,14 +84,6 @@ npm run dev
 ```
 Open `http://localhost:3000` to browse.
 
-### 8. Deploy to Vercel
-Deploy the `/frontend` subdirectory to Vercel. Set the following environment variables in Vercel settings:
-- `NEXT_PUBLIC_API_URL`: Your ngrok tunnel URL + `/api/v1` (e.g., `https://abc-123.ngrok-free.app/api/v1`)
-- `NEXTAUTH_URL`: Your Vercel deployment URL (e.g., `https://workhive-frontend.vercel.app`)
-- `NEXTAUTH_SECRET`: Any random security string
-
----
-
 ## Seeded Test Accounts
 All seeded accounts use the password: `password123`
 
@@ -102,22 +94,3 @@ All seeded accounts use the password: `password123`
 | **Seeker** | `seeker1@workhive.com` to `seeker15@workhive.com` | Browse, upload resume, apply for jobs |
 
 ---
-
-## Technical Highlights
-
-### 1. Worker Threads
-To keep the Node.js main event loop responsive, heavy tasks are offloaded to background threads:
-- **Email Worker** (`backend/src/workers/emailWorker.ts`): Spawns a thread using `nodemailer` to dispatch confirmation emails asynchronously on application submissions.
-- **Resume Parser Worker** (`backend/src/workers/resumeParserWorker.ts`): Spawns a thread using `pdf-parse` to extract text content from PDF resumes, writing `.txt` copies to disk and updating the database application records.
-
-### 2. Next.js Server Actions
-Next.js Server Actions execute on the server for write operations, hiding internal keys and APIs from client bundles:
-- `applyAction`: Handles resume upload and application submission.
-- `postJobAction`: Handles job posting.
-- `updateApplicantAction`: Handles employer applicant status changes.
-
-### 3. Repository Pattern
-Strict separation of concerns. The Express backend uses:
-- **Controllers**: Zod schema request validation.
-- **Services**: Enforces business logic and spawns worker threads.
-- **Repositories**: Direct Prisma commands. Prisma is never imported or called outside the repository layer.

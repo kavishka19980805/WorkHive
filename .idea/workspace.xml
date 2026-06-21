@@ -4,23 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce4c4d37-a98f-4b58-a12b-8b76dee03cbb" name="Changes" comment="fix some issue">
+    <list default="true" id="ce4c4d37-a98f-4b58-a12b-8b76dee03cbb" name="Changes" comment="add new notification feature and bug fixing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/dist/controllers/ApplicationController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dist/controllers/ApplicationController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dist/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/dist/repositories/ApplicationRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dist/repositories/ApplicationRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/dist/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dist/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/dist/services/ApplicationService.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dist/services/ApplicationService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/dist/workers/resumeParserWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dist/workers/resumeParserWorker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controllers/ApplicationController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/ApplicationController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/repositories/ApplicationRepository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/repositories/ApplicationRepository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/routes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/routes/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/services/ApplicationService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/services/ApplicationService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/workers/resumeParserWorker.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/workers/resumeParserWorker.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/apply/[jobId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/apply/[jobId]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/auth/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/auth/login/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/employer/post/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/employer/post/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/AGENTS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/CLAUDE.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,61 +38,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="6.817536948809422E-5" />
-      <entry key="MS500" value="0.2537749594164194" />
-      <entry key="S2" value="1.1932645639332058" />
-      <entry key="S5" value="1.6266752188439075" />
-      <entry key="S10" value="1.803696464574459" />
-      <entry key="S30" value="1.9457153801730886" />
-      <entry key="S60" value="2.349324211755668" />
-      <entry key="M2" value="4.035739159550245" />
-      <entry key="M5" value="7.613108626661667" />
-      <entry key="M10" value="9.858979262433902" />
-      <entry key="M15" value="10.791305232625618" />
-      <entry key="M30" value="11.833953840855598" />
-      <entry key="H1" value="12.400841862643004" />
-      <entry key="H2" value="12.84920682575744" />
-      <entry key="H4" value="18.33355731981683" />
-      <entry key="D1" value="155.58020012763092" />
-      <entry key="W1" value="289.131335433079" />
+      <entry key="MS100" value="1.0011377586913321" />
+      <entry key="MS500" value="1.319527622277978" />
+      <entry key="S2" value="2.887010024254843" />
+      <entry key="S5" value="5.183367975549724" />
+      <entry key="S10" value="8.025563870633956" />
+      <entry key="S30" value="13.624873341004788" />
+      <entry key="S60" value="16.3224324853034" />
+      <entry key="M2" value="18.016136165299436" />
+      <entry key="M5" value="19.168236237172167" />
+      <entry key="M10" value="19.57744075572593" />
+      <entry key="M15" value="19.716786255601438" />
+      <entry key="M30" value="19.85768263695168" />
+      <entry key="H1" value="19.953942740972995" />
+      <entry key="H2" value="20.54483991799428" />
+      <entry key="H4" value="23.879186477938205" />
+      <entry key="D1" value="140.18733983316167" />
+      <entry key="W1" value="298.66497082252937" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0000000054465805" />
-      <entry key="S30" value="1.002702604928373" />
-      <entry key="S60" value="1.0731990868692478" />
-      <entry key="M2" value="1.382198526930989" />
-      <entry key="M5" value="2.031379402123938" />
-      <entry key="M10" value="2.4361672682429045" />
-      <entry key="M15" value="2.603771215583164" />
-      <entry key="M30" value="2.7909525164564064" />
-      <entry key="H1" value="2.8926020738386358" />
-      <entry key="H2" value="2.9523412078343307" />
-      <entry key="H4" value="3.1550082773515884" />
-      <entry key="D1" value="8.490650179615715" />
-      <entry key="W1" value="15.167899803249043" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="3.0E-323" />
+      <entry key="S60" value="4.2513443056730264E-162" />
+      <entry key="M2" value="2.7510179109916484E-81" />
+      <entry key="M5" value="1.0650260764741545E-32" />
+      <entry key="M10" value="1.7639720612361992E-16" />
+      <entry key="M15" value="4.523339870288358E-11" />
+      <entry key="M30" value="1.1632703191574271E-5" />
+      <entry key="H1" value="0.005905447228425283" />
+      <entry key="H2" value="0.1333977787869606" />
+      <entry key="H4" value="0.670643203868513" />
+      <entry key="D1" value="6.559279223098991" />
+      <entry key="W1" value="14.61885413093688" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.019169110158164134" />
-      <entry key="MS500" value="0.7045203198762187" />
-      <entry key="S2" value="2.0108497062807964" />
-      <entry key="S5" value="2.5489961498040987" />
-      <entry key="S10" value="2.764016993398851" />
-      <entry key="S30" value="2.934924214415824" />
-      <entry key="S60" value="3.4147563316126353" />
-      <entry key="M2" value="5.411847911454398" />
-      <entry key="M5" value="9.6401927233986" />
-      <entry key="M10" value="12.292418031307184" />
-      <entry key="M15" value="13.393096993814723" />
-      <entry key="M30" value="14.623826996254895" />
-      <entry key="H1" value="15.292879901152112" />
-      <entry key="H2" value="15.801256956498575" />
-      <entry key="H4" value="21.48838842836021" />
-      <entry key="D1" value="164.0707123185779" />
-      <entry key="W1" value="304.29919883117344" />
+      <entry key="MS100" value="0.9603631196185555" />
+      <entry key="MS500" value="1.3089256643487825" />
+      <entry key="S2" value="2.8810367448113374" />
+      <entry key="S5" value="5.178786806172246" />
+      <entry key="S10" value="8.02184981841538" />
+      <entry key="S30" value="13.622707038107611" />
+      <entry key="S60" value="16.321127660691754" />
+      <entry key="M2" value="18.015414373547767" />
+      <entry key="M5" value="19.167928672908946" />
+      <entry key="M10" value="19.57728362902566" />
+      <entry key="M15" value="19.71668074542809" />
+      <entry key="M30" value="19.85764112646332" />
+      <entry key="H1" value="19.95982037067678" />
+      <entry key="H2" value="20.678211187568035" />
+      <entry key="H4" value="24.54978533727234" />
+      <entry key="D1" value="146.7465113409557" />
+      <entry key="W1" value="313.28378970679944" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -198,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781951029352</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add new notification feature and bug fixing">
+      <option name="closed" value="true" />
+      <created>1782064381978</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1782064381978</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +216,7 @@
     <MESSAGE value="fix some css issues" />
     <MESSAGE value="add ngrok url" />
     <MESSAGE value="fix some issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix some issue" />
+    <MESSAGE value="add new notification feature and bug fixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new notification feature and bug fixing" />
   </component>
 </project>
